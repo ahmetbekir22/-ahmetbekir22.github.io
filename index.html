@@ -4,160 +4,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmet Bekir Arslanalp | Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio website complete</title>
 </head>
 
 <body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Ahmet Bekir Arslanalp</a>
+            </div>
 
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="about-text hover-target">about</div>
-        <div class="contact-text hover-target">contact</div>
-        <div class="section-center">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <h1>Ahmet Bekir Arslanalp</h1>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hi,I'am <span class="home__title-color">Ahmet Bekir </span><br>
+                    Software Engineering<br>Student</h1>
+
+                <!-- Mailto Link ile Contact Butonunu Güncelleme -->
+                <a href="mailto:ahmetbekirarslanalp@gmail.com" class="button">Contact</a>
+            </div>
+
+            <div class="home__social">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/ahmet-bekir-arslanalp-a659b7207/" class="home__social-icon"
+                    target="_blank">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/ahmetbekir22" class="home__social-icon" target="_blank">
+                    <i class='bx bxl-github'></i>
+                </a>
+            </div>
+
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <g mask="url(#mask0)" transform="translate(30, 0)">
+                            <path
+                                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                            <image class="home__blob-img" x="80" y="60" href="assets/img/ahmet.png" />
+                        </g>
+
+                </svg>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/ahmet.png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">I'm Ahmet Bekir Arslanalp</h2>
+                    <p class="about__text"> I am a Software Engineering student at Muğla Sıtkı Koçman University,
+                        I have a strong interest in artificial intelligence, computer
+                        vision, and mobile development. I enjoy building smart and impactful technologies that solve
+                        real-world problems. I’m always eager to learn and improve myself in these areas through
+                        hands-on projects and continuous learning.
+
+
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__grid">
+
+                <div class="skill__card">
+                    <i class="fas fa-globe skill__icon"></i>
+                    <h3 class="skill__title">English</h3>
+                    <p class="skill__level">B2</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fab fa-python skill__icon"></i>
+                    <h3 class="skill__title">Python</h3>
+                    <p class="skill__level">Intermediate to Advanced</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-mug-hot skill__icon"></i>
+                    <h3 class="skill__title">Java</h3>
+                    <p class="skill__level">Intermediate</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-terminal skill__icon"></i>
+                    <h3 class="skill__title">C / C#</h3>
+                    <p class="skill__level">Familiar</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-mobile-screen-button skill__icon"></i>
+                    <h3 class="skill__title">Flutter & Dart</h3>
+                    <p class="skill__level">Proficient</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-fire-flame-curved skill__icon"></i>
+                    <h3 class="skill__title">Firebase</h3>
+                    <p class="skill__level">Proficient</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-leaf skill__icon"></i>
+                    <h3 class="skill__title">Django</h3>
+                    <p class="skill__level">Familiar</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-link skill__icon"></i>
+                    <h3 class="skill__title">REST API Integration</h3>
+                    <p class="skill__level">Proficient</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-robot skill__icon"></i>
+                    <h3 class="skill__title">Machine Learning & Deep Learning</h3>
+                    <p class="skill__level">Familiar</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-eye skill__icon"></i>
+                    <h3 class="skill__title">Computer Vision</h3>
+                    <p class="skill__level">Familiar</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-code-branch skill__icon"></i>
+                    <h3 class="skill__title">Git & GitHub</h3>
+                    <p class="skill__level">Intermediate</p>
+                </div>
+
+                <div class="skill__card">
+                    <i class="fas fa-diagram-project skill__icon"></i>
+                    <h3 class="skill__title">Agile / Project Management</h3>
+                    <p class="skill__level">Intermediate</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--===== Projects =====-->
+
+        <section class="work section" id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects__grid">
+
+                <!-- Smart City App -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/smart_city-min.png" alt="Smart City App">
                     </div>
-                    <div class="col-12 text-center mb-2">
-                        <div class="dancing">your role here</div>
-                    </div>
-                    <div class="col-12 text-center mt-4 mt-lg-5">
-                        <p>
-                            <span class="travel hover-target">travel</span>
-                            <span class="wildlife hover-target">wildlife</span>
-                            <span class="nature hover-target">nature</span>
+                    <div class="project__content">
+                        <a href="#" target="_blank" class="project__title">Smart City Mobile App</a>
+                        <p class="project__desc">
+                            A Flutter-based application that integrates open municipal APIs to provide real-time urban
+                            services. Built with GetX and public APIs.
                         </p>
+                        <div class="project__tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">GetX</span>
+                            <span class="tag">REST API</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- About Section -->
-    <div class="about-section">
-        <div class="about-close hover-target"></div>
-        <div class="section-center">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <img src="img/my_image.jpeg" alt="Your Photo">
+                <!-- File & Image Comparison -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/File_comparison.png" alt="File Comparison App">
                     </div>
-                    <div class="col-lg-8 text-center mt-4">
-                        <p>This is your about section. Write a few lines about yourself here.</p>
-                    </div>
-                    <div class="col-12 text-center">
-                        <p><span>Your Name</span></p>
+                    <div class="project__content">
+                        <a href="#" target="_blank" class="project__title">File & Image Comparison Web App</a>
+                        <p class="project__desc">
+                            A Django-based web platform allowing users to compare files and images visually. Designed
+                            for academic and legal usage.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">Python</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Contact Section -->
-    <div class="contact-section">
-        <div class="contact-close hover-target"></div>
-        <div class="section-center">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <a href="mailto:you@example.com" class="hover-target">you@example.com</a>
+                <!-- Online Mediation -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/pecaport_logo.jpeg" alt="Online Mediation">
                     </div>
-                    <div class="col-12 text-center social mt-4">
-                        <a href="#" class="hover-target">instagram</a>
-                        <a href="#" class="hover-target">linkedin</a>
-                        <a href="#" class="hover-target">github</a>
+                    <div class="project__content">
+                        <a href="https://github.com/ahmetbekir22/Online-Mediation-Platform" target="_blank"
+                            class="project__title">Online Mediation Platform</a>
+                        <p class="project__desc">
+                            A full-featured Flutter app providing an online environment for users to access legal
+                            mediation services. Integrated with Firebase backend.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Firebase</span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Focus App -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/focus_app.jpg" alt="Focus App">
+                    </div>
+                    <div class="project__content">
+                        <a href="https://github.com/ahmetbekir22/focus-app-flutter" target="_blank"
+                            class="project__title">Focus App</a>
+                        <p class="project__desc">
+                            A mobile productivity application built with Flutter to help users stay focused through
+                            session tracking and minimalist UI.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wine Quality Prediction -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/wine_quality.jpg" alt="Wine Quality">
+                    </div>
+                    <div class="project__content">
+                        <a href="https://github.com/ahmetbekir22/wine-quality-prediction" target="_blank"
+                            class="project__title">Wine Quality Prediction</a>
+                        <p class="project__desc">
+                            A machine learning project predicting wine quality based on physicochemical features using
+                            various classification algorithms.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facial Expression Recognition -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/emotion_recognation.webp" alt="Facial Recognition">
+                    </div>
+                    <div class="project__content">
+                        <a href="https://github.com/ahmetbekir22/facial-expression-recognition-openCV" target="_blank"
+                            class="project__title">Facial Expression Recognition</a>
+                        <p class="project__desc">
+                            Real-time facial emotion recognition using OpenCV and Haar Cascades. Classifies expressions
+                            like happy, sad, angry, etc.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </section>
+
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Ahmet Bekir Arslanalp</p>
+        <div class="footer__social">
+            <!-- GitHub Linki -->
+            <a href="https://github.com/ahmetbekir22" class="footer__icon" target="_blank">
+                <i class='bx bxl-github'></i>
+            </a>
+            <!-- LinkedIn Linki -->
+            <a href="https://www.linkedin.com/in/ahmet-bekir-arslanalp-a659b7207/" class="footer__icon" target="_blank">
+                <i class='bx bxl-linkedin'></i>
+            </a>
         </div>
-    </div>
+    </footer>
 
-    <!-- Travel Section -->
-    <div class="travel-section">
-        <div class="travel-close hover-target"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h3>travel</h3>
-                </div>
-                <div class="col-12 mt-3 text-center">
-                    <p><span>Project or photo description</span></p>
-                </div>
-                <div class="col-12 text-center">
-                    <p>Details about this project or photo series go here.</p>
-                </div>
-                <!-- Example images -->
-                <div class="col-md-6 col-lg-4">
-                    <img src="img/istanbul.jpeg" alt="">
-                </div>
-                <!-- Add more images here -->
-            </div>
-        </div>
-    </div>
 
-    <!-- Wildlife Section -->
-    <div class="wildlife-section">
-        <div class="wildlife-close hover-target"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h3>wildlife</h3>
-                </div>
-                <div class="col-12 mt-3 text-center">
-                    <p><span>Project or photo description</span></p>
-                </div>
-                <div class="col-12 text-center">
-                    <p>Details about this project or experience.</p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <img src="img/istanbul.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Nature Section -->
-    <div class="nature-section">
-        <div class="nature-close hover-target"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h3>nature</h3>
-                </div>
-                <div class="col-12 mt-3 text-center">
-                    <p><span>Project or photo description</span></p>
-                </div>
-                <div class="col-12 text-center">
-                    <p>Details about this project or photo series.</p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <img src="img/istanbul.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- Custom Cursors -->
-    <div class='cursor' id="cursor"></div>
-    <div class='cursor2' id="cursor2"></div>
-    <div class='cursor3' id="cursor3"></div>
-
-    <!-- Link to creator (optional) -->
-    <a href="https://front.codes/" class="link-to-portfolio hover-target" target="_blank"></a>
-
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
