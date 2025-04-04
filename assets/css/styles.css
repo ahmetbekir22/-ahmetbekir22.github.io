@@ -195,12 +195,21 @@ img {
 /*===== HOME =====*/
 .home {
   position: relative;
-  row-gap: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 4rem 0 5rem;
+  gap: 2rem;
+  /* Yazı ve resim arasında boşluk */
 }
 
 .home__data {
   align-self: center;
+  max-width: 50%;
+  /* Yazı kısmının genişliğini sınırladık */
+  gap: 10px;
+
 }
 
 .home__title {
@@ -215,11 +224,12 @@ img {
 .home__social {
   display: flex;
   flex-direction: column;
+  gap: 25px;
+  margin-top: 10px;
 }
 
 .home__social-icon {
   width: max-content;
-  margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
 }
@@ -229,18 +239,45 @@ img {
 }
 
 .home__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 260px;
+  width: 220px;
+  height: 400px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8%;
 }
 
-.home__blob {
-  fill: var(--first-color);
+.home__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Resmi düzgün şekilde kırpar */
 }
 
-.home__blob-img {
-  width: 360px;
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 767px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    /* Ekran küçüldüğünde yazı ve resim alt alta gelecek */
+  }
+
+  .home__data {
+    max-width: 100%;
+    text-align: center;
+    /* Yazı kısmı tam genişliği kaplasın */
+  }
+
+  .home__img {
+    width: 80%;
+    /* Resmin genişliğini %80 yapıyoruz */
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .home__title {
+    font-size: 2rem;
+    /* Daha küçük yazı boyutu */
+  }
 }
 
 /*BUTTONS*/
@@ -252,6 +289,7 @@ img {
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   transition: 0.3s;
+  gap: 5rem;
 }
 
 .button:hover {
@@ -344,37 +382,40 @@ img {
   border-radius: 0.5rem;
 }
 
-/* ===== WORK =====*/
+/* ===== Projects =====*/
 
 
-/* .work__container {
-  row-gap: 2rem;
-}
-
-.work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.work__img img {
-  transition: 1s;
-}
-
-.work__img img:hover {
-  transform: scale(1.1);
-} */
-
+/* Projects Grid Layout */
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Allows flexible column sizing */
   gap: 2rem;
   padding: 0 2rem;
 }
 
+/* Project Card */
+.project__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  height: 100%;
+  /* Makes card expand with content */
+}
+
+.project__card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image inside the card */
 .project__image-wrapper {
   width: 100%;
   aspect-ratio: 16 / 9;
+  /* Maintains the aspect ratio */
   overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -384,34 +425,21 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Ensures the image covers the space */
   display: block;
 }
 
-
-.project__card {
-  width: 100%;
-  height: 400px;
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.project__card:hover {
-  transform: translateY(-5px);
-}
-
-.project__card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
+/* Project Content */
 .project__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1.2rem;
+  flex-grow: 1;
+  /* Ensures content section expands */
 }
 
+/* Project Title */
 .project__title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -425,27 +453,46 @@ img {
   color: var(--first-color);
 }
 
+/* Project Description */
 .project__desc {
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 1rem;
   line-height: 1.5;
+  flex-grow: 1;
+  /* Allow description to take up remaining space */
 }
 
-/* 
+/* Tags for each project */
 .project__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: auto;
+  /* Push tags to the bottom */
 }
 
 .tag {
-  background-color: #c6f6d5;
-  color: #22543d;
+  background-color: #5C6BC0;
+  /* Soft blue background for tags */
+  color: #fff;
+  /* White text color */
   padding: 0.3rem 0.6rem;
   border-radius: 1rem;
   font-size: 0.75rem;
-} */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
+}
+
+/* Tag hover effect */
+.tag:hover {
+  background-color: #3f51b5;
+  /* Darker blue on hover */
+  cursor: pointer;
+}
+
+
+
 .project__tags {
   display: flex;
   flex-wrap: wrap;
@@ -469,8 +516,149 @@ img {
   cursor: pointer;
 }
 
+/*===== EXPERIENCE =====*/
+.experience {
+  padding: 4rem 2rem;
+}
+
+.experience__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience__card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  /* İçeriğe göre yüksekliği esnek hale getirir */
+  flex-wrap: wrap;
+}
+
+.experience__card:hover {
+  transform: translateY(-5px);
+}
+
+.experience__image {
+  width: 15%;
+  height: auto;
+  /* Logo solda %20 genişlik alır */
+  overflow: hidden;
+}
+
+.experience__image img {
+  width: 150%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.experience__content {
+  width: 60%;
+  /* İçeriğin genişliği %60 olacak */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.experience__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--second-color);
+  margin-bottom: 0.5rem;
+}
+
+.experience__title:hover {
+  color: var(--first-color);
+}
+
+.experience__desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.experience__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience__dates {
+  width: 15%;
+  text-align: right;
+  /* Tarihler sağda olacak */
+  font-size: 1rem;
+  color: var(--second-color);
+}
+
+.tag {
+  background-color: #5C6BC0;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+}
+
+.tag:hover {
+  background-color: #3f51b5;
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 767px) {
+  .experience__card {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .experience__image {
+    width: 30%;
+    height: 80px;
+  }
+
+  .experience__content {
+    width: 100%;
+  }
+
+  .experience__dates {
+    width: 100%;
+    text-align: left;
+  }
+}
 
 
+/* Styling for the "More Projects" section */
+.more-projects {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.more-projects p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.more-projects .github-link {
+  font-weight: 600;
+  color: var(--first-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.more-projects .github-link:hover {
+  color: #333;
+}
 
 
 

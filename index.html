@@ -28,6 +28,7 @@
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experiences</a></li>
                 </ul>
             </div>
 
@@ -41,15 +42,13 @@
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,I'am <span class="home__title-color">Ahmet Bekir </span><br>
-                    Software Engineering<br>Student</h1>
+                <h1 class="home__title">Hi,I'am <span class="home__title-color">Ahmet Bekir
+                        Software Engineer<br></h1>
 
                 <!-- Mailto Link ile Contact Butonunu Güncelleme -->
                 <a href="mailto:ahmetbekirarslanalp@gmail.com" class="button">Contact</a>
-            </div>
+                &nbsp;&nbsp; <!-- Boşluk ekler -->
 
-            <div class="home__social">
-                <!-- LinkedIn -->
                 <a href="https://www.linkedin.com/in/ahmet-bekir-arslanalp-a659b7207/" class="home__social-icon"
                     target="_blank">
                     <i class='bx bxl-linkedin'></i>
@@ -60,21 +59,11 @@
                 </a>
             </div>
 
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <mask id="mask0" mask-type="alpha">
-                        <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <g mask="url(#mask0)" transform="translate(30, 0)">
-                            <path
-                                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                            <image class="home__blob-img" x="80" y="60" href="assets/img/ahmet.png" />
-                        </g>
 
-                </svg>
+
+            <div class="home__img">
+                <img src="assets/img/profile2.jpeg" alt="Profile Image">
+
             </div>
         </section>
 
@@ -84,12 +73,13 @@
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="assets/img/ahmet.png" alt="">
+                    <img src="assets/img/profile2.jpeg" alt="">
                 </div>
 
                 <div>
                     <h2 class="about__subtitle">I'm Ahmet Bekir Arslanalp</h2>
-                    <p class="about__text"> I am a Software Engineering student at Muğla Sıtkı Koçman University,
+                    <p class="about__text"> I am a 3rd year Software Engineering student at Muğla Sıtkı Koçman
+                        University,
                         I have a strong interest in artificial intelligence, computer
                         vision, and mobile development. I enjoy building smart and impactful technologies that solve
                         real-world problems. I’m always eager to learn and improve myself in these areas through
@@ -119,7 +109,7 @@
                 </div>
 
                 <div class="skill__card">
-                    <i class="fas fa-mug-hot skill__icon"></i>
+                    <i class="fas fa-coffee skill__icon"></i>
                     <h3 class="skill__title">Java</h3>
                     <p class="skill__level">Intermediate</p>
                 </div>
@@ -192,10 +182,11 @@
                 <!-- Smart City App -->
                 <div class="project__card">
                     <div class="project__image-wrapper">
-                        <img src="assets/img/smart_city-min.png" alt="Smart City App">
+                        <img src="assets/img/icon3.jpeg" alt="Smart City App">
                     </div>
                     <div class="project__content">
-                        <a href="#" target="_blank" class="project__title">Smart City Mobile App</a>
+                        <a href="https://github.com/ahmetbekir22/izmir_smart_city_mobile_app.git" target="_blank"
+                            class="project__title">Smart City Mobile App</a>
                         <p class="project__desc">
                             A Flutter-based application that integrates open municipal APIs to provide real-time urban
                             services. Built with GetX and public APIs.
@@ -245,6 +236,31 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Web page for online mediation -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/peaceport_web.jpeg" alt="Smart City App">
+                    </div>
+                    <div class="project__content">
+                        <a href="#" target="_blank" class="project__title">Online Mediation Platform Web Page</a>
+                        <p class="project__desc">
+                            A basic web version of the Online Mediation Platform built with Django. Uses SQLite for the
+                            database and HTML, CSS, and
+                            JavaScript for the frontend.
+
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- Focus App -->
                 <div class="project__card">
@@ -305,7 +321,94 @@
                 </div>
 
             </div>
+            <div class="more-projects">
+                <p>To explore more of my work, kindly visit my <a href="https://github.com/ahmetbekir22" target="_blank"
+                        class="github-link">GitHub</a> profile.</p>
+
+            </div>
         </section>
+
+
+        <!--===== EXPERIENCE =====-->
+        <section class="experience section" id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience__timeline">
+                <!-- Experience Card 1 -->
+                <div class="experience__card">
+                    <div class="experience__image">
+                        <img src="assets/img/shellix_logo.png" alt="Experience 1">
+                    </div>
+                    <div class="experience__content">
+                        <h3 class="experience__title">Shellix Smart Solutions | Part Time Mobile Developer</h3>
+                        <p class="experience__desc">
+                            Worked on developing mobile applications using Flutter, Firebase, and Dart. Contributed to
+                            mobile and web development projects, focusing on building scalable applications.
+                        </p>
+                        <div class="experience__tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Mobile Development</span>
+                            <span class="tag">Web Development</span>
+                            <span class="tag">Rest API</span>
+                        </div>
+                    </div>
+                    <div class="experience__dates">
+                        <p>February 2025 - Present</p>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+
+                <div class="experience__card">
+                    <div class="experience__image">
+                        <img src="assets/img/shellix_logo.png" alt="Experience 2">
+                    </div>
+                    <div class="experience__content">
+                        <h3 class="experience__title">Shellix Smart Solutions | Intern</h3>
+                        <p class="experience__desc">
+                            Assisted in mobile app development projects. Gained hands-on experience with Flutter and
+                            Dart while contributing to the development of mobile applications.
+                        </p>
+                        <div class="experience__tags">
+                            <span class="tag">Mobile Development</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Rest API</span>
+                            <span class="tag">Dart</span>
+                        </div>
+                    </div>
+                    <div class="experience__dates">
+                        <p>July 2024 - August 2024</p>
+                    </div>
+                </div>
+                <div class="experience__card">
+                    <div class="experience__image">
+                        <img src="assets/img/uni.jpg" alt="University">
+                    </div>
+                    <div class="experience__content">
+                        <h3 class="experience__title">Muğla Sıtkı Koçman University | Software Engineering Student</h3>
+                        <p class="experience__desc">
+                            Currently pursuing a degree in Software Engineering with a strong interest in artificial
+                            intelligence, computer vision, and mobile development. Actively participating in various
+                            academic projects
+                            and learning new technologies.
+                        </p>
+                        <!-- GPA Information -->
+                        <p class="experience__gpa"><strong>GPA:</strong> 3.39</p>
+                    </div>
+                    <div class="experience__dates">
+                        <p>September 2021 - Present</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
 
     </main>
 
