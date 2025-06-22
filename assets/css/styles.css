@@ -909,3 +909,106 @@ img {
     }
   }
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #18191a;
+  color: #e4e6eb;
+}
+
+body.dark-mode .l-header,
+body.dark-mode .footer {
+  background: #242526;
+  color: #e4e6eb;
+}
+
+body.dark-mode .nav__menu,
+body.dark-mode .nav__logo,
+body.dark-mode .nav__link {
+  background: #242526;
+  color: #e4e6eb;
+}
+
+body.dark-mode .section-title {
+  color: #fff;
+}
+
+body.dark-mode .project__card {
+  background: #242526;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .project__title,
+body.dark-mode .project__desc {
+  color: #e4e6eb;
+}
+
+body.dark-mode .experience__title {
+  color: #fff;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 200;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background: #222;
+  color: #fff;
+}
+
+/* Project card hover effect */
+.project__card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project__card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode .skills__grid {
+  background: #18191a;
+}
+
+body.dark-mode .skill__card {
+  background: #18191a;
+  color: #e4e6eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .experience__timeline {
+  background: #18191a;
+}
+
+body.dark-mode .experience__card {
+  background: #18191a;
+  color: #e4e6eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .skill__title {
+  color: #fff;
+}
+
+body.dark-mode .home__social-icon,
+body.dark-mode .footer__icon {
+  color: #fff;
+}
+
+body.dark-mode .home__social-icon:hover,
+body.dark-mode .footer__icon:hover {
+  color: #8ab4f8;
+}

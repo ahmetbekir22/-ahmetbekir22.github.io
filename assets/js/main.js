@@ -54,4 +54,28 @@ const sr = ScrollReveal({
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 });
 sr.reveal('.home__social-icon', { interval: 200 });
-sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 }); 
+sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 });
+
+// ===== DARK MODE TOGGLE =====
+(function () {
+    // Create toggle button
+    const btn = document.createElement('button');
+    btn.className = 'dark-mode-toggle';
+    btn.title = 'Toggle dark mode';
+    btn.innerHTML = '🌙';
+    document.body.appendChild(btn);
+
+    // Check localStorage for mode
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+
+    btn.onclick = function () {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    };
+})(); 
