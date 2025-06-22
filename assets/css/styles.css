@@ -947,6 +947,10 @@ body.dark-mode .experience__title {
   color: #fff;
 }
 
+body.dark-mode .experience__dates {
+  color: #fff;
+}
+
 /* Dark mode toggle button */
 .dark-mode-toggle {
   position: fixed;
