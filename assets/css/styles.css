@@ -1049,3 +1049,24 @@ body.dark-mode .footer__icon:hover {
 body.dark-mode .project__card--capstone {
   border-top-color: var(--first-color);
 }
+
+/* Funding label */
+.project__funding {
+  font-size: 0.78rem;
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+/* Funding tag variant */
+.tag--funding {
+  background-color: #2e7d32;
+}
+
+.tag--funding:hover {
+  background-color: #1b5e20;
+}
+
+body.dark-mode .project__funding {
+  color: #81c784;
+}
