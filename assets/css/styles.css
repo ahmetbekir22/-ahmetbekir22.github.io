@@ -1016,3 +1016,36 @@ body.dark-mode .home__social-icon:hover,
 body.dark-mode .footer__icon:hover {
   color: #8ab4f8;
 }
+
+/* ===== CAPSTONE PROJECT CARD ===== */
+
+/* Same layout as other cards, just a subtle top accent */
+.project__card--capstone {
+  border-top: 3px solid var(--first-color);
+}
+
+/* Badge overlay on image */
+.project__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: 2rem;
+  letter-spacing: 0.03em;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Make the image wrapper a positioning context for the badge */
+.project__image-wrapper {
+  position: relative;
+}
+
+/* Dark mode */
+body.dark-mode .project__card--capstone {
+  border-top-color: var(--first-color);
+}

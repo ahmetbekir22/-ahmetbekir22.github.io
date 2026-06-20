@@ -162,6 +162,65 @@
         <section class="work section" id="projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects__grid">
+                <!-- CAPSTONE: Federated Drone Emergency Landing -->
+                <div class="project__card project__card--capstone">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/drone_fl_capstone.png"
+                            alt="Privacy-Preserving Semantic Segmentation for Drone Emergency Landing via Federated Learning">
+                        <span class="project__badge">🎓 Capstone</span>
+                    </div>
+                    <div class="project__content">
+                        <a href="https://github.com/ahmetbekir22/frugal-federated-uav-landing-detection.git"
+                            target="_blank" class="project__title">
+                            Privacy-Preserving Semantic Segmentation for Drone Emergency Landing via Federated Learning
+                        </a>
+                        <p class="project__desc">
+                            A privacy-preserving federated learning system where 15 distributed drone clients
+                            collaboratively train a LiDAR semantic segmentation model — raw point cloud data never
+                            leaves the device. Compressed model updates (FedNova + TopK-EF, 62% bandwidth reduction)
+                            drive a geometric risk pipeline that scores safe emergency landing zones 0–100.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Federated Learning</span>
+                            <span class="tag">Flower (flwr)</span>
+                            <span class="tag">RandLANet</span>
+                            <span class="tag">LiDAR / Point Cloud</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AgriVision IoT -->
+                <div class="project__card">
+                    <div class="project__image-wrapper">
+                        <img src="assets/img/agrivision_iot.jpeg" alt="AgriVision IoT Platform">
+                    </div>
+                    <div class="project__content">
+                        <a href="https://github.com/ahmetbekir22/Smart-Irrigation-Automation-System" target="_blank"
+                            class="project__title">AgriVision IoT - Smart Agriculture Platform</a>
+                        <p class="project__desc">
+                            A production-ready IoT platform combining satellite imagery (NDVI), real-time weather data,
+                            and intelligent decision algorithms for precision agriculture. Features MQTT messaging,
+                            InfluxDB time-series storage, multi-zone farm simulation, and real-time dashboard for
+                            irrigation automation.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">MQTT</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">InfluxDB</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Google Earth Engine</span>
+                            <span class="tag">OpenWeatherMap API</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">Smart Agriculture</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Smart City App -->
                 <div class="project__card">
                     <div class="project__image-wrapper">
@@ -363,28 +422,6 @@
                             <span class="tag">JWT</span>
                             <span class="tag">REST API</span>
                             <span class="tag">SQLite</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Federated Drone Emergency Landing -->
-                <div class="project__card">
-                    <div class="project__image-wrapper">
-                        <img src="assets/img/drones.webp" alt="Federated Drone Emergency Landing">
-                    </div>
-                    <div class="project__content">
-                        <a href="https://github.com/ahmetbekir22/FL-Drone-Emergency-Landing.git" target="_blank"
-                            class="project__title">Federated Drone Emergency Landing</a>
-                        <p class="project__desc">A network-resilient federated learning system where multiple drones
-                            collaboratively learn to detect safe emergency landing zones from 3D point clouds without
-                            sharing raw sensor data.</p>
-                        <div class="project__tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Federated Learning</span>
-                            <span class="tag">Flower</span>
-                            <span class="tag">PointNet++</span>
-                            <span class="tag">3D Point Cloud</span>
-                            <span class="tag">Deep Learning</span>
                         </div>
                     </div>
                 </div>
